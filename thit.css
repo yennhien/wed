@@ -1,0 +1,243 @@
+@keyframes example {
+    10% {
+        opacity: 0.9;
+    }
+    20% {
+        opacity: 0.8;
+    }
+    30% {
+        opacity: 0.7;
+    }
+    40% {
+        opacity: 0.6;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    60% {
+        opacity: 0.4;
+    }
+    70% {
+        opacity: 0.3;
+    }
+    80% {
+        opacity: 0.2;
+    }
+    90% {
+        opacity: 0.1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#layout {
+    width: 1000px;
+    display: grid;
+    grid-template-rows: auto 60px auto;
+    margin: auto;
+    grid-template-areas: "sale" "head" "content";
+    background-color: lightgray;
+}
+
+#sale {
+    background-color: white;
+    grid-area: sale;
+    /* border: 1px solid green; */
+}
+
+.sale {
+    width: 1000px;
+    height: 47.5px;
+}
+
+#header {
+    background-color: white;
+    position: relative;
+    grid-area: head;
+    /* border: 1px solid black; */
+}
+
+.logo {
+    height: 50px;
+    width: auto;
+}
+
+.timkiem {
+    width: 400px;
+    position: absolute;
+    font-size: 25px;
+    padding: 7px;
+    bottom: 5px;
+    left: 250px;
+    color: whitesmoke;
+    border-radius: 10px;
+    border: 1px solid lightgray;
+}
+
+.nuttimkiem {
+    position: absolute;
+    bottom: 10px;
+    left: 690px;
+    height: 35px;
+    width: 75px;
+    border: none;
+    background-color: red;
+    border-radius: 7.5px;
+    color: white;
+}
+
+#content {
+    background-color: white;
+    grid-area: content;
+    /* border:1px solid red; */
+    margin: 30px 20px 15px 20px;
+    border-radius: 15px;
+}
+
+#left1 {
+    float: left;
+    background-color: white;
+}
+
+.hinhanhsp,
+.hinhanhspdau {
+    width: 200px;
+    padding: 15px;
+}
+
+.hinhanhlon,
+.hinhanhdemo {
+    width: 250px;
+}
+
+td.cot22,
+td.cot23 {
+    display: none;
+}
+
+td.cot12:hover td.cot22 {
+    display: block;
+}
+
+td.cot13:hover td.cot23 {
+    display: block;
+}
+
+td.cot12:hover td.cot21 {
+    display: none;
+}
+
+td.cot13:hover td.cot21 {
+    display: none;
+}
+
+.gia {
+    color: red;
+    font-size: 25px;
+}
+
+.soluong {
+    width: 25px;
+    margin-left: 25px;
+}
+
+.them,
+.mua {
+    width: 150px;
+    padding: 6px;
+    float: left1;
+    margin: 20px;
+    font-weight: bold;
+    border-radius: 8px;
+}
+
+.them {
+    color: red;
+    background-color: white;
+    border: 3px solid red;
+}
+
+.mua {
+    color: white;
+    background-color: red;
+    border: 3px solid red;
+}
+
+#left2 {
+    display: none;
+}
+
+#left1 {
+    display: block;
+}
+
+@media screen and (max-width:768px) {
+    #layout {
+        width: 500px;
+        grid-template-rows: auto 100px auto;
+    }
+    #sale,
+    .nuttimkiem,
+    .mua,
+    .them,
+    .an {
+        display: none;
+    }
+    #header {
+        border: 1px solid gray;
+        border-left: 5px solid red;
+    }
+    .logo {
+        margin-left: 200px;
+        width: 100px;
+        height: auto;
+    }
+    .timkiem {
+        size: 20;
+        width: 250px;
+        left: 100px;
+        height: 12.5px;
+        top: 50px;
+        font-size: 10px;
+    }
+    #content {
+        text-align: center;
+        margin: 0;
+        border-radius: 0;
+    }
+    #left1 {
+        display: none;
+    }
+    #left2 {
+        display: block;
+        position: relative;
+    }
+    .hinhanhdemo,
+    .hinhanhlon {
+        width: 100%;
+    }
+    .l_22,
+    .l_23 {
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+    .hinhanhlon {
+        display: none;
+    }
+    #left2:hover .hinhanhdemo {
+        opacity: 0;
+    }
+    #left2:hover .hinhanhlon {
+        display: block;
+    }
+    .l_22:hover {
+        animation-name: example;
+        animation-duration: 3s;
+    }
+}
